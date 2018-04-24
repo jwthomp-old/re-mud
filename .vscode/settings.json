@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/._*": true,
+        "src/*.bs.js": true,
+        "node_modules/": true,
+        ".bsb.lock": true,
+        "package-lock.json": true
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "remud",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world || true",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "run": "node src/Demo.bs.js || true"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^3.0.0"
+  },
+  "dependencies": {
+    "eslint": "^4.19.1"
+  }
+}
