@@ -1,25 +1,29 @@
 type world = {
     id: int,
-    rooms: list(Room.room)
+    rooms: Immutable.List.t(Room.t)
 };
 
-let load = (id) => {
+type t = world;
+
+let load = (id:int) => {
     {
         id: id,
-        rooms: []
+        rooms: Immutable.List.empty()
     }
 };
+
 
 let display = (world) => {
     Js.log("World id: " ++ string_of_int(world.id));
     Js.log("Rooms:");
-    List.iter(Room.display, world.rooms)
+    Immutable.List.forEach(Room.display, world.rooms)
 };
+
 
 let add_room = (world, room) => {
     {
         id: world.id,
-        rooms: List.append(world.rooms, [room])
+        rooms: Immutable.List.addFirst(room, world.rooms)
     }
 };
 

@@ -16,6 +16,7 @@
     "bs-platform": "^3.0.0"
   },
   "dependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "immutable-re": "file:../immutable-re"
   }
 }
